@@ -4,10 +4,11 @@
 using namespace std;
 
 class Persona {
-    public:
+    private:
         string nombre;
         int edad;
 
+    public:
         Persona(string n, int e) {
             nombre = n;
             edad = e;
@@ -15,8 +16,8 @@ class Persona {
         ~Persona() {
             cout << "destructor" << endl;
         }
-        void saludo(string n) {
-            cout << "Hola " << n << endl;
+        void saludo() {
+            cout << "Hola " << nombre << endl;
         }
 };
 
@@ -26,7 +27,6 @@ int main() {
 
     // delete p2; solo con punteros.
 
-    cout << p.nombre << endl;
-    p.saludo(p.nombre);
-    p2.saludo(p2.nombre);
+    p.saludo();
+    p2.saludo();
 }
